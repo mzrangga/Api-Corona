@@ -6,7 +6,7 @@ fetch("https://covid.mathdro.id/api/daily/3-13-2020")
         let hasil = "";
         data.forEach((confirm) => {
             hasil += `
-            <div class="col-sm mt-3">
+            <div class="card mt-3">
                 <div class="text-white card mb-4 bg-dark " style="width: 20rem;">
                     <div class="row no-gutters">
                         <div class="col-md-6 text-center"

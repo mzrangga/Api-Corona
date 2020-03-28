@@ -1,4 +1,4 @@
-fetch("https://covid.mathdro.id/api/daily/3-13-2020")
+fetch("https://api.kawalcorona.com/")
     .then(function (response) {
         return response.json();
     })
@@ -11,25 +11,22 @@ fetch("https://covid.mathdro.id/api/daily/3-13-2020")
                     <div class="row no-gutters">
                         <div class="col-md-6 text-center"
                             <p class="card-text mb-1 mt-1">Negara</p>
-                            <h5 class="text-center card-title mb-1 mt-1">${confirm.countryRegion}</h5>
+                            <h5 class="text-center card-title mb-1 mt-1">${confirm.attributes.Country_Region}</h5>
                         <hr>
-                            <p class="card-text mb-1 mt-1">Latitude</p>
-                            <h5 class="text-center card-title mb-1 mt-1">${confirm.latitude}</h5>
-                        <hr>
-                            <p class="card-text mb-1 mt-1">Longitude</p>
-                            <h5 class="text-center card-title mb-1 mt-1">${confirm.longitude}</h5>
+                            <p class="card-text mb-1 mt-1">Aktif</p>
+                            <h5 class="text-center card-title mb-1 mt-1">${confirm.attributes.Active}</h5>
                         </div>
                         
                         <div class="text-dark col-md-6 text-center bg-light"
                             <div class="card-body">
                                 <p class="card-text mb-1 mt-1">Terkonfirmasi</p>
-                                <h5 class="text-center card-title mb-1 mt-1">${confirm.confirmed}</h5>
+                                <h5 class="text-center card-title mb-1 mt-1">${confirm.attributes.Confirmed}</h5>
                             <hr>
                                 <p class="card-text mb-1 mt-1">Meninggal</p>
-                                <h5 class="text-center card-title mb-1 mt-1">${confirm.deaths}</h5>
+                                <h5 class="text-center card-title mb-1 mt-1">${confirm.attributes.Deaths}</h5>
                             <hr>
                                 <p class="card-text mb-1 mt-1">Sembuh</p>
-                                <h5 class="text-center card-title mb-1 mt-1">${confirm.recovered}</h5>
+                                <h5 class="text-center card-title mb-1 mt-1">${confirm.attributes.Recovered}</h5>
                             </div>
                         </div>
                     </div>
